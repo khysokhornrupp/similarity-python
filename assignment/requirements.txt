@@ -1,3 +1,5 @@
-pip install texthero
-pip install pandas
-pip install -U scikit-learn
+texthero
+pandas
+numpy
+seaborn
+scikit-learn
