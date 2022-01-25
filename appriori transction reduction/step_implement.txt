@@ -1,0 +1,2 @@
+1. calculate 1 frequency itemset 
+2. add all 1 frequenct itemset to Fk

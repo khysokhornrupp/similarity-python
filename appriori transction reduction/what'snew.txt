@@ -1,0 +1,48 @@
+{% comment %} read the last 2 row of dataframe  {% endcomment %}
+
+df.iloc[-2:]
+
+------------------- What to do -------------------
+
+1. calculate RCi in each column 
+
+
+s = 0
+temp_sum = 0
+for i in range(all_item):
+    for j in range(item_set):
+        temp_sum += int(pd.DataFrame(b['RC']).iloc[i]) & int(k.iloc[i, j]) & temp_sum
+
+        if(j == item_set):
+            s += temp_sum
+            temp_sum = 0
+        print(i, ', ', j, ' : ', int(pd.DataFrame(b['RC']).iloc[i]), ' & ',  int(
+            k.iloc[i, j]), ' = ', int(pd.DataFrame(b['RC']).iloc[i]) & int(k.iloc[i, j]))
+s
+
+
+
+zin two 
+
+temp = 0
+s = 0
+for i in range(k_itemset.shape[0]):
+    temp =  int(k_itemset.iloc[i, 0])
+    ab = []
+    for j in range(k_itemset.shape[1] - 1) : 
+        temp &= int( k_itemset['size'].loc[i]) & int(k_itemset.iloc[i, j]) 
+        print(k_itemset['size'].loc[i] , ' & ' , k_itemset.iloc[i, j], ' = ', temp)
+        #print("temp : ", temp)
+    s += temp
+    print(temp,'\n')
+print("Support count of ", k_itemset.shape[1] - 1, ' = ', s) 
+
+
+
+do something all, and ignore only some column in pandas 
+
+df.iloc[:,~df.columns.isin(['column1', 'column2'])]
+ => mean that we get every row but ingore only column, column1, and column2
+
+df.sum(axis=1)
+ => sum every row in dataframe
